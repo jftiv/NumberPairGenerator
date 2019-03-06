@@ -5,9 +5,6 @@ let givers = fillArrays(participants),
     receivers = fillArrays(participants),
     complete;
 
-//console.log(givers);
-//console.log(receivers);
-
 let data = randParts(givers, receivers);
 
 console.log(data);

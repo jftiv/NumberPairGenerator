@@ -1,10 +1,7 @@
-window.
-
 describe("randParts() no same numbers", () => {
     randPartsTest(300);
     randPartsTest(10000);
     randPartsTest(10);
-    randPartsTest(0);
 });
 
 describe("fillArray function", () => {
@@ -17,7 +14,7 @@ describe("fillArray function", () => {
         assert.equal(fillArrays(300).length, 300);
     });
 
-    it("array filled with -1 integers = err (fail)", function() {
+    it("array filled with -1 integers = 'This is not a valid number.' (fail)", function() {
         expect(fillArrays(-1)).to.eql(["This is not a valid number."]);
     }); 
   

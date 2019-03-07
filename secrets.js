@@ -1,15 +1,5 @@
 'use strict';
 
-let participants = prompt('How many people will be participating?', '');
-let givers = fillArrays(participants),
-    receivers = fillArrays(participants),
-    complete;
-
-let data = randParts(givers, receivers);
-
-console.log(data);
-complete = true;
-
 function fillArrays (nums) {
     let arr = [];
     if (nums <= 0) {
@@ -37,4 +27,10 @@ function randParts (givers, receivers) {
         }
     }
     return data;
+}
+
+function splitReturn (arr) {
+        let randGivers = arr.map(x => x.split('@')[0]);
+        let randReceivers = arr.map(x => x.split('@')[1]);
+        return [randGivers, randReceivers];
 }

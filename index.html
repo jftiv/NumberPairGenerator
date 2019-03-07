@@ -3,10 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello World</title>
+    <title>JS Test Platform</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <script src="secrets.js"></script>
+    <script type="text/javascript">
+    	let participants = prompt('How many people will be participating?', '');
+		let givers = fillArrays(participants),
+    		receivers = fillArrays(participants),
+    		complete;
+
+		let data = randParts(givers, receivers);
+
+		console.log(data);
+		console.log(splitReturn(data));
+		complete = true;
+    </script>
 </body>
 </html>

@@ -1,8 +1,16 @@
-describe("randParts() no same numbers", () => {
+describe("randParts no same numbers", () => {
     randPartsTest(300);
     randPartsTest(10000);
     randPartsTest(10);
 });
+
+describe("inspect randPartsTest logic. arr1 should equal arr2", () => {
+    it("Inspect Test logic; arr1 should equal arr2", () => {
+        arr1 = [1,2,3];
+        arr2 = [1,2,3];
+        expect(arr1).to.eql(arr2);
+    });
+})
 
 describe("fillArray function", () => {
 
@@ -27,8 +35,7 @@ function randPartsTest (num) {
     let testParts = randParts(givers, receivers);
 
     it("No numbers match each other given " + participants + " participants.", () => {
-        testGivers = testParts.map(x => x.split('@')[0]);
-        testReceivers = testParts.map(x => x.split('@')[1]);
-        expect(testGivers).to.not.eql(testReceivers);
+        dataMatch = splitReturn(testParts);
+        expect(dataMatch[0]).to.not.eql(dataMatch[1]);
     });
 }
